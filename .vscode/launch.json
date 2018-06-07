@@ -6,7 +6,7 @@
             "type": "node",
             "request": "launch",
             //"program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
-            "program": "C:/Users/kentang/.webclipse/nodejs/9.8.0/node_modules/mocha/bin/_mocha",
+            "program": "../node_modules/mocha/bin/_mocha",
             "args": ["-r", "ts-node/register", "${relativeFile}"],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
