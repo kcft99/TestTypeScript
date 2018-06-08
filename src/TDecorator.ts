@@ -1,5 +1,11 @@
-function log (taget : any, key : string, desctiption: any){
-    console.log(key);
+function log (taget : any, key : string, descriptor: any){
+    const original = descriptor.value;
+    descriptor.value = function (...args:any[]) {
+        const result = original.apply(this, args);
+        console.log(`${key} with arguments ${args[0]} is  ${result}`);
+        return result;
+    }
+    return descriptor;
 }
 
 class Calculator {
